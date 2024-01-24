@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-display">
+            <div class="display" id="display">0</div>
+        </div>
+		<br>
+        <div class="calculator-buttons">
+            <!-- Memory buttons -->
+			
+            <button class="button function disabled" onclick="memoryClear()">MC</button>
+            <button class="button function disabled" onclick="memoryRecall()">MR</button>
+            <button class="button function" onclick="memoryAdd()"><strong>M+</strong></button>
+            <button class="button function" onclick="memorySubtract()"><strong>M-</strong></button>
+            <button class="button function" onclick="memorySave()"><strong>MS</strong></button>
+            <button class="button function disabled" onclick="memoryClear()">M*</button>
+			</div>
+			<br>
+			<div class="calculator-buttons2">
+            <!-- Function buttons -->
+            <button class="button function" onclick="toggleSecondFunctions()">2nd</button>
+            <button class="button function" onclick="inputPi()">π</button>
+            <button class="button function" onclick="inputE()">e</button>
+            <button class="button function" onclick="clearEntry()">C</button>
+            <button class="button function" onclick="clearAll()">DEL</button>
+            <!-- Scientific functions -->
+            <button class="button function" onclick="square()">x²</button>
+            <button class="button function" onclick="oneOverX()">1/x</button>
+            <button class="button function" onclick="absolute()">|x|</button>
+            <button class="button function" onclick="exp()">exp</button>
+            <button class="button function" onclick="mod()">mod</button>
+			<button class="button function" onclick="mod()">√x</button>
+            <button class="button function" onclick="mod()">(</button>
+            <button class="button function" onclick="mod()">)</button>
+            <button class="button function" onclick="mod()">n!</button>
+            <button class="button function" onclick="mod()">÷</button>
+            <button class="button function" onclick="setPowerOperation()">x<sup>y</sup></button>
+            <button class="button number special-color" onclick="mod()"><strong>7</strong></button>
+            <button class="button number special-color" onclick="mod()"><strong>8</strong></button>
+            <button class="button number special-color" onclick="mod()"><strong>9</strong></button>
+            <button class="button function" onclick="mod()">X</button>
+            <button class="button function" onclick="mod()">10<sup>x</sup></button>
+			<button class="button number special-color" onclick="mod()"><strong>4</strong></button>
+            <button class="button number special-color" onclick="mod()"><strong>5</strong></button>
+            <button class="button number special-color" onclick="mod()"><strong>6</strong></button>
+            <button class="button function" onclick="mod()">-</button>
+            <button class="button function" onclick="mod()">log</button>
+            <button class="button number special-color" onclick="mod()"><strong>1</strong></button>
+            <button class="button number special-color" onclick="mod()"><strong>2</strong></button>
+            <button class="button number special-color" onclick="mod()"><strong>3</strong></button>
+            <button class="button function" onclick="mod()">+</button>   
+			<button class="button function" onclick="mod()">ln</button>
+            <button class="button number special-color" onclick="mod()">+/-</button>
+            <button class="button number special-color" onclick="mod()"><strong>0</strong></button>
+            <button class="button number special-color" onclick="mod()"><strong>.</strong></button>
+<button class="button equals" onclick="calculateResult()">=</button>
+
+
+
+            <!-- ... Add the rest of your scientific buttons -->
+            <!-- Number buttons -->
+          
+            <!-- ... Add the rest of your operation buttons -->
+            <!-- Equal button -->
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
+<script>
+
+</script>
+<style>
+.calculator {
+    width: 550px;
+    margin: auto;
+	
+}
+.special-color {
+    background-color: #ffcc00; 
+}
+
+.calculator-display {
+    border: 1px solid #888;
+    min-height: 50px;
+    text-align: right;
+    padding: 10px;
+    font-size: 18px;
+}
+.button.disabled {
+    opacity: 0.5; /* Makes the button look faded */
+    cursor: not-allowed; /* Changes the cursor to indicate the button is disabled */
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+.calculator-buttons2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    cursor: pointer;
+	font-size: 14px;
+}
+
+.button.function {
+    background-color: #E8E8E8;
+}
+
+.button.memory {
+    background-color: #d0d0d0;
+	text-align:center;
+}
+
+.button.scientific {
+    background-color: #c0c0c0;
+}
+
+.button.number {
+    background-color: #f9f9f9;
+}
+
+.button.operation {
+    background-color: #f0f0f0;
+}
+
+.button.equals {
+    background-color: #ADD8E6; /* Light Blue */
+}
+
+#equals-button {
+    background-color: #ADD8E6; /* Light Blue */
+    /* Other styles */
+}
+
+
+
+</style>
