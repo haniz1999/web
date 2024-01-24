@@ -71,10 +71,8 @@
 </script>
 <style>
 .calculator {
-    max-width: 700px;
+    width: 600px;
     margin: auto;
-    height: auto;
-    overflow-y: auto; /* Add scroll if necessary */
 }
 .special-color {
     background-color: #ffcc00; 
@@ -92,18 +90,16 @@
     cursor: not-allowed;
 }
 
-.calculator-buttons, .calculator-buttons2 {
+.calculator-buttons {
     display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
 }
-   .calculator-buttons, .calculator-buttons2 {
-        grid-template-columns: repeat(4, 1fr); /* Adjust number of columns for smaller screens */
-    }
-	@media (max-width: 800px) {
-    .calculator {
-        max-width: 100%;
-        padding: 10px;
-    }
+.calculator-buttons2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
 
 .button {
     padding: 10px;
